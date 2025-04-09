@@ -1,12 +1,20 @@
-import { SidebarContainer, NomeCompleto, Nome, Sobrenome } from './styles'
+import Avatar from '../../components/Avatar'
+import Paragrafo from '../../components/Paragrafo'
+import Titulo from '../../components/Titulo'
+
+import { Descricao, BotaoTema, SidebarContainer } from './styles'
 
 const Sidebar = () => (
   <SidebarContainer>
-    <img src="https://github.com/rafaelscdev.png" alt="Foto de Rafael Correa" />
-    <NomeCompleto>
-      <Nome>Rafael</Nome>
-      <Sobrenome>Correa</Sobrenome>
-    </NomeCompleto>
+    <Avatar />
+    <Titulo fontSize={20}>Rafael Corrêa</Titulo>
+    <Paragrafo tipo="secundario" fontSize={16}>
+      rafaelscdev
+    </Paragrafo>
+    <Descricao tipo="principal" fontSize={12}>
+      Engenheiro front-end
+    </Descricao>
+    <BotaoTema>Trocar tema</BotaoTema>
   </SidebarContainer>
 )
 

@@ -2,19 +2,21 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 const EstiloGlobal = createGlobalStyle`
   * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  list-style: none;
-}
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+  }
 
-body {
-  padding-top: 80px;
-}
-
-@media (max-width: 768px) {
-  padding-top: 16px;
-}
+  body {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (max-width: 768px) {
+      padding-top: 16px;
+    }
+  }
 `
 
 export default EstiloGlobal
@@ -28,11 +30,8 @@ export const Container = styled.div`
   column-gap: 56px;
 
   @media (max-width: 768px) {
-    max-width: 80%;
-    display: block;
-  }
-
-  img {
     max-width: 100%;
+    display: block;
+    padding: 0;
   }
 `
